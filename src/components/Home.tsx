@@ -12,12 +12,12 @@ export interface IState {
       imdb_rating: number,
       length: string,
       overview: string,
-      poster: string
+      poster: string,
       released_on: string,
       slug: string,
       title: string,
     }[],
-    setMovieChoice: (movies: {}) => {}
+    setMovieChoice: any,
 } 
 
 function Home() {
@@ -33,7 +33,7 @@ function Home() {
           },
         });
       const data = await response.json();
-      //console.log(data);
+ 
       updateMovies(data.movies);
       
   }
